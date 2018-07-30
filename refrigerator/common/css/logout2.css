@@ -1,0 +1,148 @@
+@charset 'UTF-8';
+
+/* --------------------------------------
+1.0 - Common
+2.0 - Header
+3.0 - Main
+4.0 - Footer
+-------------------------------------- */
+
+/* --------------------------------------
+1.0 - Common
+-------------------------------------- */
+
+html {
+  font: 62.5%/1 Meiryo;
+}
+
+
+body {
+  background-color: beige;
+  color: #394c4c;
+}
+
+/* --------------------------------------
+2.0 - Header
+-------------------------------------- */
+
+.header {
+  margin: 10px 0;
+}
+
+.header__logo {
+  text-align: center;
+}
+
+/* --------------------------------------
+3.0 - Main
+-------------------------------------- */
+
+.main {
+  margin-bottom: 10px;
+}
+
+.main__header {
+  background: #9cc;
+  color: #394c4c;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 7px 0 7px 7px;
+}
+
+.main__header::before {
+  content: '';
+  border-left: 5px solid white;
+  margin-right: 7px;
+}
+
+.main__text {
+  font-size: 3rem;
+  line-height: 1.5;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.main__text2 {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.main__link {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.main__link a {
+  color: #9cc;
+}
+
+.main__link a:hover {
+  color: #C63;
+}
+
+.main__text a {
+  color: #394c4c;
+  margin-left: 2rem;
+}
+
+.main__text a:hover {
+  color: #C63;
+}
+
+.form__list > dt {
+  border-left: 10px solid #9cc;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  padding-left: 5px;
+}
+
+.form__list > dd {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+input[type="file"],
+input[type="text"],
+input[type="password"] {
+  margin-bottom: 5px;
+  padding: 5px;
+  width: 100%;
+}
+
+.btn-primary {
+  border-radius: 10px;
+  background-color: #9cc;
+  border-color: #9cc;
+  color: #394c4c;
+}
+
+.btn-primary:hover {
+  background: rgba(255,255,255,0.7);
+  color: #394c4c;
+
+}
+
+.error {
+  border: solid 1px #C63;
+  color: #C63;
+  font-size: 1.4rem;
+  padding: 3px 5px;
+}
+
+.login__check {
+  margin-left: 1rem;
+}
+
+/* --------------------------------------
+4.0 - Footer
+-------------------------------------- */
+
+.footer__copy {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}

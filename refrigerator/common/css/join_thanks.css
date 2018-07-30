@@ -1,0 +1,81 @@
+@charset 'UTF-8';
+
+/* --------------------------------------
+1.0 - Common
+2.0 - Header
+3.0 - Main
+4.0 - Footer
+-------------------------------------- */
+
+/* --------------------------------------
+1.0 - Common
+-------------------------------------- */
+
+html {
+  font: 62.5%/1 Meiryo;
+}
+
+
+body {
+  background-color: beige;
+  color: #394c4c;
+}
+
+/* --------------------------------------
+2.0 - Header
+-------------------------------------- */
+
+.header {
+  margin: 10px 0;
+}
+
+.header__logo {
+  border-right: #394c4c 15px solid;
+  border-left: #394c4c 15px solid;
+  background: #9cc;
+  margin: 7px 0;
+  line-height: 5rem;
+}
+
+/* --------------------------------------
+3.0 - Main
+-------------------------------------- */
+
+.wrapper {
+  text-align: center;
+}
+
+.main {
+  margin-bottom: 10px;
+}
+
+.main__header {
+  font-weight: bolder;
+  margin-bottom: 10px;
+  padding: 7px 0 7px 7px;
+}
+
+.main__text {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 5rem;
+}
+
+.main__link a {
+  color: #9cc;
+  font-size: 2.5rem;
+}
+
+.main__link a:hover {
+  color: #c63;
+}
+
+/* --------------------------------------
+4.0 - Footer
+-------------------------------------- */
+
+.footer__copy {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,185 @@
+@charset 'UTF-8';
+
+/* --------------------------------------
+1.0 - Common
+2.0 - Header
+3.0 - Main
+4.0 - Footer
+-------------------------------------- */
+
+/* --------------------------------------
+1.0 - Common
+-------------------------------------- */
+
+html {
+  font: 62.5%/1 Meiryo;
+}
+
+
+body {
+  background-color: beige;
+  color: #394c4c;
+  margin: 0;
+  padding: 0;
+}
+
+ul,li {
+  list-style: none;
+}
+
+table {
+  margin: 0;
+  padding: 0;
+}
+/* --------------------------------------
+2.0 - Header
+-------------------------------------- */
+
+.header {
+  margin: 10px 0;
+}
+
+.header__logo {
+  text-align: center;
+}
+
+/* --------------------------------------
+3.0 - Main
+-------------------------------------- */
+
+.main {
+  margin-bottom: 10px;
+}
+
+.main__header {
+  background: #9cc;
+  color: #394c4c;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 7px 0 7px 7px;
+}
+
+.main__link {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  margin-left: 5rem;
+  text-align: left;
+}
+
+.main__link a {
+  color: #9cc;
+}
+
+.main__link a:hover {
+  color: #C63;
+}
+
+.main__header::before {
+  content: '';
+  border-left: 5px solid white;
+  margin-right: 15px;
+}
+
+.main__text {
+  border-bottom: 1px solid #394c4c;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  margin-left: 3rem;
+}
+
+.main__text2 {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  margin-left: 5rem;
+}
+
+.main__text2 a {
+  color: #9cc;
+}
+
+.main__text2 a:hover {
+  color: #C63;
+}
+
+.reg__item {
+  border-left: 4px solid #9cc;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  padding-left: 5px;
+}
+
+.reg__fields {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+input[type="file"],
+input[type="text"],
+input[type="password"] {
+  margin-bottom: 5px;
+  padding: 5px;
+  width: 100%;
+}
+
+.required {
+  background: #C63;
+  color: white;
+  font-size: 1.4rem;
+  margin-left: 10px;
+  padding: 3px;
+}
+
+.btn-primary {
+  border-radius: 10px;
+  background-color: #9cc;
+  border-color: #9cc;
+  color: #394c4c;
+}
+
+.btn-primary:hover {
+  background: rgba(255,255,255,0.7);
+  color: #394c4c;
+
+}
+
+.error {
+  border: solid 1px #C63;
+  color: #C63;
+  font-size: 1.4rem;
+  padding: 3px 5px;
+}
+
+.form {
+  border-bottom: 1px solid #666;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+
+table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.main__item {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.main__item2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+/* --------------------------------------
+4.0 - Footer
+-------------------------------------- */
+
+.footer__copy {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
