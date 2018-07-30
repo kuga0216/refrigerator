@@ -7,19 +7,19 @@ $number = (string)filter_input(INPUT_POST, 'number');
 $memo   = (string)filter_input(INPUT_POST, 'memo');
 
 if(isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()){
-  // ログインしている
+  // ログインしているかどうかチェック
   $_SESSION['time'] = time();
 
   $members = $db->prepare('SELECT * FROM members WHERE id=?');
   $members->execute(array($_SESSION['id']));
   $member = $members->fetch();
 } else {
-  // ログインしてない
+  // ログインしてなければログインへ
   header('Location: login.php');
   exit();
 }
 
-// 物たちを記録する
+// 名前と数が空欄でなければ物たちを記録する
 if(!empty($_POST)){
   if($_POST['vege'] !== '' && $_POST['number'] !== ''){
     $veges = $db->prepare('INSERT INTO records SET member_id=?, vege_name=?, number=?, memo=?, created=NOW()');
@@ -34,7 +34,7 @@ if(!empty($_POST)){
   }
 }
 
-// 物たちを取得する
+// 物たちを取得してページ管理
 $page = $_GET['page'];
 if($page === ''){
   $page = 1;
@@ -46,27 +46,13 @@ $cnt = $counts->fetch();
 $maxPage = ceil($cnt['cnt'] / 10);
 $page = min($page, $maxPage);
 $start = ($page - 1) * 10;
-// echo $cnt['cnt'];
-// exit;
 $records = $db->prepare('SELECT m.name, r.* FROM members m, records r WHERE m.id=r.member_id ORDER BY r.created ASC LIMIT ?, 10');
 $records->bindParam(1, $start, PDO::PARAM_INT);
 $records->execute();
 
-// $recorder = $db->query('SELECT * FROM records');
-// $b = $a->fetch();
-// echo $b['vege_name'];
-// echo $b['number'];
-// echo $b['memo'];
-// echo $b['created'];
-// echo $_POST['id'];
-// exit;
-
-$id = 1;
-// echo $page;
-// exit;
 // 書き直し機能
+$id = 1;
 if($action === 'rewrite'){
-  // $_POST = $_SESSION['join'];
   $error['rewrite'] = true;
   $name = $_SESSION['join']['name'];
   $email = $_SESSION['join']['email'];
